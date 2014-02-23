@@ -17,6 +17,8 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'exifr'
+
 group :test do
   gem 'faker'
   gem 'rspec'
