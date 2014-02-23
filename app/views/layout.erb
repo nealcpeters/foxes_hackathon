@@ -7,21 +7,26 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
   <script src="/js/application.js"></script>
+
+<!--
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=API_KEY&sensor=SET_TO_TRUE_OR_FALSE">
+     </script>
+-->
 
   <title></title>
 </head>
 <body>
-  
-  <%= erb :_errors %>
-  <%= yield %>
+  <%= erb :_nav_bar %>
+  <div class="container-fluid">
+    <%= erb :_errors %>
+    <%= yield %>
+  </div>
 </body>
 </html>
