@@ -1,3 +1,3 @@
-Dir.entries('../public/images/').each do |photo|
+Dir.foreach('../public/images/') do |photo|
 	photo.EXIFR::JPEG.exif
 end
