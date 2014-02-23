@@ -1,6 +1,7 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+	has_many :pictures
   has_secure_password 
   validates :user_name, presence: true
   validates :email, presence: true, uniqueness: true
