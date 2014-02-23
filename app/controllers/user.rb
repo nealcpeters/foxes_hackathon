@@ -1,5 +1,4 @@
 get '/user/new' do
-
   erb :"user_views/new"
 end
 
@@ -8,7 +7,6 @@ get '/user/sign_in' do
 end
 
 get '/user/sign_out' do
-  p session
   session[:user_id] = nil
   redirect to('/')
 end
