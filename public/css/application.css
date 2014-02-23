@@ -8,6 +8,12 @@ th {
   text-align: left;
 }
 
+#map-canvas {
+  width: 500px;
+  height: 500px;
+
+}
+
 
 .errors {
   list-style: none;
