@@ -1,22 +1,88 @@
 <h1>User page</h1>
+<% @pics.each do |pic| %>
+  <p style="display: none;" class="latitude"><%= pic.latitude %></p>
+  <p style="display: none;" class="longitude"><%= pic.longitude %></p>
+  <p style="display: none;" class="path"><%= pic.path %></p>
+<% end %>
+
 
 <div id="map-canvas" style="height: 500px;"></div>
+
+
 
 <script type="text/javascript">
   function initialize() {
     var myLatlng = new google.maps.LatLng(42.018977, -87.802839);
+
     var mapOptions = {
       zoom: 3,
       center: myLatlng
-    }
+    };
+
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-    var marker = new google.maps.Marker({
-        position: myLatlng,
+    
+
+    var latitudes = $('.latitude');
+    var longitudes = $('.longitude');
+    var paths = $('.path');
+
+    // var coords1 = new google.maps.LatLng(latitudes[1].innerHTML, longitudes[1].innerHTML);
+
+    // var coords2 = new google.maps.LatLng(latitudes[2].innerHTML, longitudes[2].innerHTML);
+
+  
+
+    // var marker = new google.maps.Marker({
+    //     position: coords1,
+    //     map: map,
+    //     title: 'Hello World!'
+    //   });
+
+    // var marker = new google.maps.Marker({
+    //     position: coords2,
+    //     map: map,
+    //     title: 'hello Ian!'
+    //   });
+
+    
+
+    // var pictures = $("#pictures");
+    // console.log(pictures.length);
+    // console.log(myLatlng);
+    // console.log(coords2);
+    // console.log(coords3);
+
+    for (var i = 0, max = longitudes.length; i < max; i++) {
+      var longitude = (longitudes[i].innerHTML);
+      var latitude = (latitudes[i].innerHTML);
+      var path = paths[i].innerHTML;
+      var coord = new google.maps.LatLng(latitude, longitude);
+      var marker = new google.maps.Marker({
+        position: coord,
         map: map,
-        title: 'Hello World!'
-    });
-  }
+        title: path
+      });
+
+    }
+
+    
+    
+    
+
+    // for (var i=0; i<latitudes.length; i++){ 
+    //   var coords = new google.maps.LatLng(latitudes[i].innerHTML, longitudes[i].innerHTML);
+    //   var marker = new google.maps.Marker({
+    //     position: coords,
+    //     map: map,
+    //     title: 'Hello World!'
+    //   });
+      
+    // };
+  
+  };
+
+    
 
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
