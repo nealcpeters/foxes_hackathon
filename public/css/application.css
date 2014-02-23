@@ -9,9 +9,9 @@ th {
 }
 
 #map-canvas {
-  width: 500px;
+  width: 80%;
   height: 500px;
-
+  margin: 1em auto;
 }
 
 

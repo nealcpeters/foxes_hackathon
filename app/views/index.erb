@@ -1,2 +1,7 @@
-
-<h1> we are in index</h1>
+<div class="jumbotron">
+  <h1>Picture parser v 1.0</h1>
+  <% if !current_user? %>
+    <p><a class="btn btn-primary btn-lg" role="button" href="/user/sign_in">Sign In</a></p>
+    <p><a class="btn btn-primary btn-lg" role="button" href="/user/new">Create an Account</a></p>
+  <% end %>
+</div>
