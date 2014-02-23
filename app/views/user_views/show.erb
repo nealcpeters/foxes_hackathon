@@ -1,3 +1,22 @@
 <h1>User page</h1>
 
 <div id="map-canvas" style="height: 500px;"></div>
+
+<script type="text/javascript">
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(42.018977, -87.802839);
+    var mapOptions = {
+      zoom: 3,
+      center: myLatlng
+    }
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'Hello World!'
+    });
+  }
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
