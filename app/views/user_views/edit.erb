@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h1>Please fill out the form below to save your changes!<small>Subtext for header</small></h1>
+</div>
+
+<form action="/user/edit" method="POST">
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon">Email</span>
+    <input type="text" class="form-control" value="<%= @user.email %>" name="email">
+  </div>
+
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon">Current Password</span>
+    <input type="password" class="form-control" placeholder="Password" name="current_password">
+  </div>
+
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon">New Password</span>
+    <input type="password" class="form-control" placeholder="Password" name="password">
+  </div>
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon">Password Confirmation</span>
+    <input type="password" class="form-control" placeholder="Password" name="password_confirmation">
+  </div>
+
+  <input type="submit" value="Save Changes" class="btn btn-primary">
+</form>
+
+
+<button href="/user/delete" type="button" class="btn btn-danger">Delete My Account</button>

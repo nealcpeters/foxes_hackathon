@@ -19,6 +19,8 @@ gem 'shotgun'
 
 gem 'exifr'
 
+gem 'bcrypt-ruby'
+
 group :test do
   gem 'faker'
   gem 'rspec'
