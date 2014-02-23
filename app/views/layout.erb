@@ -59,7 +59,7 @@
       function initialize() {
         var mapOptions = {
           zoom: 8,
-          center: new google.maps.LatLng(-34.397, 150.644)
+          center: new google.maps.LatLng(41.8819, -87.6278)
         };
         map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
@@ -74,7 +74,7 @@
 </head>
 <body>
   <%= erb :_nav_bar %>
-  <div class="container-fluid" style = "height: 500px;">
+  <div class="container-fluid">
     <%= erb :_errors %>
     
     <%= yield %>
