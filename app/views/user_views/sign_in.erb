@@ -1,1 +1,15 @@
-sign_in
+<div class="page-header">
+  <h1>Please fill out the form below!<small>Subtext for header</small></h1>
+</div>
+
+<form action="/user/sign_in" method="POST">
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon">Email</span>
+    <input type="text" class="form-control" placeholder="Email" name="email">
+  </div>
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon">Password</span>
+    <input type="password" class="form-control" placeholder="Password" name="password">
+  </div>
+
+<input type="submit" value="Sign-in" class="btn default navbar-btn">
