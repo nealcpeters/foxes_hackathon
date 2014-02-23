@@ -26,8 +26,10 @@ end
 
 get '/user/:id' do
   @user = User.find(session[:user_id])
-  p session[:user_id]
-  p @user.id
+  @pictures = @user.pictures
+  @pics = []
+  @pictures.each{|pic| @pics << pic}
+  p @pics
   redirect to("/") if @user.id != params[:id].to_i
   erb :"user_views/show"
 end
