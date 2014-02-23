@@ -5,6 +5,7 @@ class CreatePictures < ActiveRecord::Migration
   		t.float :longitude
   		t.float :altitude
   		t.float :image_direction
+  		t.string :path
   		t.integer :user_id
 
   		t.timestamps
